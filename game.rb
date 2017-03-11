@@ -1,18 +1,15 @@
-# require 'Matrix'
-
 # livecell = 1
 # deadcell = 0
 
-#prints as a matrix - multidimensional array
-# m1 = Matrix[[0,1,0,0,0], [1,0,0,1,1], [1,1,0,0,1], [0,1,0,0,0], [1,0,0,0,1]]
-# m1.to_a.each {|r| puts r.inspect}
+#Start with an array of arrays.
+array = [[0,1,0,0,0], [1,0,0,1,1], [1,1,0,0,1], [0,1,0,0,0], [1,0,0,0,1]]
+#Access 1st array. Then, access 1st element in that array.
+array1 = array[0][1]
+#Check left neighbor.
+#Check top neighbor.
+#Check right neighbor.
+#Check bottom neighbor.
+#Check diagonal neighbors.
 
-class Game
-  #create the multidimensional array
-  def grid(x,y)
-    x = []
-    y = []
-    #For each x row, create y column.
-    Array.new(x).map!{Array.new(y)}
-  end
-end
+#get diagonal array
+puts (0..5).collect{ |e| array[e][e] }
