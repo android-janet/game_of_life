@@ -1,7 +1,7 @@
 <h1>The Game of Life</h1>
 
 <strong>OBJECTIVE</strong></br>
-In the Game of Life, it's all about who you surround yourself with. However, there are a few rules to the game "...if you want to live" (https://youtu.be/T-2FkSlShqoThe, Terminator, 1984).</br>
+In the Game of Life, it's all about who you surround yourself with. However, there are a few rules to the game "...if you want to live" (https://youtu.be/T-2FkSlShqoThe, Terminator 2: Judgement Day, 1991).</br>
 
 A live cell is denoted by '1', and a dead cell is '0'.</br>
 
