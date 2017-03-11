@@ -1,5 +1,7 @@
 require 'spec_helper'
 
-describe "Input Prints As Matrix" do
-
+describe Game do
+  describe "Create a grid" do
+    
+  end
 end
