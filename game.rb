@@ -12,7 +12,7 @@
 
 class Game
   def initialize
-
+    game = Game.new
   end
   #Create the grid of cells.
   def grid(x,y)

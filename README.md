@@ -1,7 +1,7 @@
-The Game of Life --  
+<h1>The Game of Life</h1> --
 
 OBJECTIVE
-In the Game of Life, it's all about who you surround yourself with. However, there are a few rules to the game "...if you want to live" (The Terminator, 1984).
+In the Game of Life, it's all about who you surround yourself with. However, there are a few rules to the game "...if you want to live" (https://youtu.be/T-2FkSlShqoThe, Terminator, 1984).
 
 A live cell is denoted by '1', and a dead cell is '0'.
 
@@ -17,8 +17,8 @@ For any dead cell,
 
 
 Technologies Used
-• Ruby 2.3.0
-• Rspec 3.5.4
+• <h1>Ruby</h1> 2.3.0
+• <h1>Rspec</h1> 3.5.4
 
 
 GETTING STARTED
@@ -39,5 +39,6 @@ Install Rspec
 3. Open the Gemfile, and add 'source 'https://rubygems.org'' and 'gem 'rspec'.'
 4. Run bundle install
 5. The Gemfile.lock will generate, which includes a quick list of dependencies, their versions, and platforms.
+6. Check to make sure you have a generated spec_helper file. Otherwise, run 'rspec --init'. The spec_helper file will generate with the proper configuration to run rspec.
 
 Create a spec folder with a spec file for the file that is being tested. In this case, we will be testing game.rb using the spec/game_spec.rb file. Include a spec/spec_helper.rb file, which is essentially a configuration file for running your specs. Check to see if Rspec is properly installed by running 'rspec spec' in the command line. If you see something like '0 examples, 0 failures' and 'No examples found,' you are ready to get started testing the program.
