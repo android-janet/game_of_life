@@ -5,8 +5,6 @@
 # y = [0]
 # array = Array.new(x).map{Array.new(y)}
 # puts array
-array = Array.new()
-puts array
 
 class Game
   #make these objects accessible in other methods
@@ -21,9 +19,7 @@ class Game
 
   #each element in grid should represent a cell with x and y coordinates
   def cell(x,y)
-    # if @grid(x,y)
-    #   @cell = grid[x][y]
-    @grid.map{ |e| grid[x][y] }
+    grid.map{ |e| e(x,y)}
   end
 
 end

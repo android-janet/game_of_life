@@ -1,14 +1,20 @@
 require './game'
 
 describe Game do
-  describe "Create a grid" do
-    #context helps keep clear and well-organized tests
-    context "When given x=4 and y=4" do
-       it "Returns a 4x4 grid" do
+
+       it "responds to cell method" do
          game = Game.new
-         game.grid(4,4)
-         puts game
+         expect(game).to respond_to(:cell)
        end
-    end
-  end
+
+       it "responds to grid method" do
+         game = Game.new
+         expect(game).to respond_to(:grid)
+       end
+
+       it "creates an empty array of arrays" do
+         game = Game.new
+         expect(game.grid(0,0)).to be_a(Array)
+       end
+
 end
