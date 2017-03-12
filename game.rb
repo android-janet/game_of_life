@@ -9,8 +9,9 @@ array = Array.new()
 puts array
 
 class Game
-  #make these objects accessible
-  attr_accessor :cell :grid
+  #make these objects accessible in other methods
+  attr_accessor :cell, :grid
+
   #create a 2-D array
   def grid(x,y)
     x = []
@@ -22,14 +23,14 @@ class Game
   def cell(x,y)
     # if @grid(x,y)
     #   @cell = grid[x][y]
-    @grid.map{ |e| }
+    @grid.map{ |e| grid[x][y] }
   end
 
 end
 
 class Neighbors
   def top_neighbor(cell)
-    cell.y > 0
+    cell.y > 0 && cell.x == 0
   end
 
   def bottom_neighbor(cell)
