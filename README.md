@@ -8,7 +8,7 @@ A live cell is denoted by '1', and a dead cell is '0'.</br>
 For any live cell,</br>
 • If there are less than 2 surrounding live cells, the live cell converts to a dead cell. (Underpopulation Rule)</br>
 • If there are exactly 2 or 3 surrounding live cells, the live cell continues on living. (Survival Rule)</br>
-• If there are more than 3 surrounding live cells, the live cell converts to a dead cell. (Overcrowding Rule)</br>
+• If there are more than 3 surrounding live cells, the live cell converts to a dead cell. (Overpopulation Rule)</br>
 
 For any dead cell,</br>
 • If there are exactly 3 surrounding dead cells, the dead cell rebirths to a live cell. (Reproduction Rule)</br>
