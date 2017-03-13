@@ -11,24 +11,28 @@ class World
   attr_accessor :cell, :grid
 
   #create a 2-D array
-  def grid(x,y)
-    x = []
-    y = []
-    @grid = Array.new(x){Array.new(y)}
+  def grid
+    row = []
+    column = []
+    @grid = Array.new(row){Array.new(column)}
   end
+end
 
-  #each element in grid should represent a cell with x and y coordinates
-  def cell(x,y)
-    grid.map{ |e| e(x,y)}
-  end
+class Cell
 
-  def alive
-    self.cell(x,y) == 1
-  end
+    #each element in grid should represent a cell with x and y coordinates
+    def cell(x,y)
+      grid.map{ |e| e(x,y)}
+    end
 
-  def dead
-    self.cell(x,y) == 0
-  end
+    def alive
+      self.cell(x,y) == 1
+    end
+
+    def dead
+      self.cell(x,y) == 0
+    end
+
 
 end
 
