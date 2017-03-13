@@ -26,12 +26,17 @@ describe Game do
     it "creates a grid as an empty array of arrays" do
       @world.grid.each do |row|
         expect(row).to be_a(Array)
+        row.each do |column|
+          expect(column).to be_a(Array)
+        end
       end
     end
 
-    it "finds a cell" do
-      expect(@world.grid(3,3)).to be_a(Cell)
+    it "creates a cell" do
+      expect(@cell).to be_an_instance_of(Cell)
     end
+
+    
 
 
   end
