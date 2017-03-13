@@ -6,7 +6,7 @@
 # array = Array.new(x).map{Array.new(y)}
 # puts array
 
-class Game
+class World
   #make these objects accessible in other methods
   attr_accessor :cell, :grid
 
@@ -14,7 +14,7 @@ class Game
   def grid(x,y)
     x = []
     y = []
-    Array.new(x){Array.new(y)}
+    @grid = Array.new(x){Array.new(y)}
   end
 
   #each element in grid should represent a cell with x and y coordinates
@@ -22,11 +22,19 @@ class Game
     grid.map{ |e| e(x,y)}
   end
 
+  def alive
+    self.cell(x,y) == 1
+  end
+
+  def dead
+    self.cell(x,y) == 0
+  end
+
 end
 
-class Neighbors
+class Game
   def top_neighbor(cell)
-    cell.y > 0 && cell.x == 0
+    cell.y > 0
   end
 
   def bottom_neighbor(cell)
