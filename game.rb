@@ -1,6 +1,6 @@
 class World
   #make these objects accessible in other methods
-  attr_accessor :rows, :columns, :cells
+  attr_accessor :rows, :columns, :cells, :grid
 
   #create a 2-D array
   def grid
@@ -13,24 +13,18 @@ class World
     end
   end
   end
+
 end
 
 class Cell
+  attr_accessor :alive, :x, :y 
+
   #initialize a cell with x and y coordinates
-  def initialize(x=3,y=3)
+  def initialize(x=0,y=0)
+    @x = x
+    @y = y
     #default as dead cell
     @alive = false
-  end
-  #each element in grid should represent a cell with x and y coordinates
-  def cell
-  end
-
-  def alive
-    self.cell == 1
-  end
-
-  def dead
-    self.cell(x,y) == 0
   end
 
 
