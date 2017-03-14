@@ -15,18 +15,21 @@ describe Game do
       @world.grid.each do |row|
         expect(row).to be_a(Array)
         row.each do |column|
-          expect(column).to be_a(Array)
+          expect(column).to be_a(Cell)
         end
       end
-    end
-
-    it "create a cell" do
-      expect(@cell).to be_an_instance_of(Cell)
     end
 
     it "create a game object" do
       @game = Game.new
       expect(@game).to be_an_instance_of(Game)
+    end
+
+  end
+
+  context "Cell" do
+    it "create a cell" do
+      expect(@cell).to be_an_instance_of(Cell)
     end
 
   end
