@@ -20,17 +20,17 @@ describe Game do
       end
     end
 
-    it "create a game object" do
-      @game = Game.new
-      expect(@game).to be_an_instance_of(Game)
+    it "create a world object" do
+      expect(@world).to be_a(World)
+    end
+
+    it "create a cell" do
+      expect(@cell).to be_an_instance_of(Cell)
     end
 
   end
 
   context "Cell" do
-    it "create a cell" do
-      expect(@cell).to be_an_instance_of(Cell)
-    end
 
   end
 
@@ -40,7 +40,12 @@ describe Game do
       @cell = Cell.new
     end
 
+    it "create a game object" do
+      @game = Game.new
+      expect(@game).to be_an_instance_of(Game)
+    end
 
+    #check game actions
 
   end
 end

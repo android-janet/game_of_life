@@ -6,10 +6,11 @@ class World
   def grid
     rows = []
     columns = []
+    cells = []
     # @grid = Array.new(row){Array.new(column)} -removed to implement a clearer way to define cell from rows and columns
     @grid = Array.new(rows) do |row|
     Array.new(columns) do |column|
-      Cell.new(column, row)
+      cell = Cell.new(column, row)
     end
   end
   end
