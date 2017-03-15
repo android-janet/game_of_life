@@ -1,6 +1,6 @@
-require './game'
+require './game_of_life'
 
-describe Game do
+describe "Game of Life" do
   context "World" do
     before (:each) do
       @world = World.new
