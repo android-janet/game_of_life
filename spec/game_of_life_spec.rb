@@ -7,11 +7,14 @@ describe "Game of Life" do
       @cell = Cell.new
     end
 
-    it "respond to grid method" do
+    it "World class responds to methods" do
       expect(@world).to respond_to(:grid)
+      expect(@world).to respond_to(:rows)
+      expect(@world).to respond_to(:columns)
+      expect(@world).to respond_to(:cells)
     end
 
-    it "create a grid as an empty array of arrays" do
+    it "creates a grid as an array of arrays" do
       @world.grid.each do |row|
         expect(row).to be_a(Array)
         row.each do |column|
@@ -20,32 +23,37 @@ describe "Game of Life" do
       end
     end
 
-    it "create a world object" do
-      expect(@world).to be_a(World)
+    #checks if @world is of the World class
+    it "creates a world object" do
+      expect(@world).to be_an_instance_of(World)
     end
 
-    it "create a cell" do
+    #checks if @cell is of the Cell class
+    it "creates a cell" do
       expect(@cell).to be_an_instance_of(Cell)
     end
 
+    it ""do
   end
 
-  context "Cell" do
+end
 
+context "Cell" do
+
+end
+
+context "Game" do
+  before (:each) do
+    @world = World.new
+    @cell = Cell.new
   end
 
-  context "Game" do
-    before (:each) do
-      @world = World.new
-      @cell = Cell.new
-    end
-
-    it "create a game object" do
-      @game = Game.new
-      expect(@game).to be_an_instance_of(Game)
-    end
-
-    #check game actions
-
+  it "create a game object" do
+    @game = Game.new
+    expect(@game).to be_an_instance_of(Game)
   end
+
+  #check game actions
+
+end
 end
