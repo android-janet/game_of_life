@@ -1,11 +1,12 @@
 require './game_of_life'
 
 describe "Game of Life" do
+  before (:each) do
+    @world = World.new
+    @cell = Cell.new
+  end
+
   context "World" do
-    before (:each) do
-      @world = World.new
-      @cell = Cell.new
-    end
 
     it "World class responds to methods" do
       expect(@world).to respond_to(:grid)
@@ -33,27 +34,23 @@ describe "Game of Life" do
       expect(@cell).to be_an_instance_of(Cell)
     end
 
-    it ""do
   end
 
-end
-
-context "Cell" do
-
-end
-
-context "Game" do
-  before (:each) do
-    @world = World.new
-    @cell = Cell.new
+  context "Cell" do
+    
+    it "creates a dead cell by default" do
+      expect(@cell.alive).to be false
+    end
   end
 
-  it "create a game object" do
-    @game = Game.new
-    expect(@game).to be_an_instance_of(Game)
+  context "Game" do
+
+    it "create a game object" do
+      @game = Game.new
+      expect(@game).to be_an_instance_of(Game)
+    end
+
+    #check game actions
+
   end
-
-  #check game actions
-
-end
 end
