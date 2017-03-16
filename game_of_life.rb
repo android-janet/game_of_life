@@ -15,8 +15,10 @@ class World
       #We will need to be able to shovel a cell into an array of cells in the game.
       cells << cell
     end
+    end
   end
-  end
+
+  #create a method to randomly populate grid with 1s and 0s?
 
 end
 
@@ -31,27 +33,34 @@ class Cell
     @alive = false
   end
 
-  #check whether cell is dead or alive
-  def dead?
-    !alive
-  end
-
-  def alive?
-    alive
-  end
-
-  #determine the cell's fate
-  def die
-    @alive = false
-  end
-
-  def live
-    @alive = true
-  end
+  # #check whether cell is dead or alive
+  # def dead?
+  #   !alive
+  # end
+  #
+  # def alive?
+  #   alive
+  # end
+  #
+  # #determine the cell's fate
+  # def die
+  #   @alive = false
+  # end
+  #
+  # def live
+  #   @alive = true
+  # end
 
 end
 
 class Game
+attr_accessor :world, :seeds
+
+  #create a world with an array of seeds that will populate the grid in the game
+  def initialize(world, seeds)
+    seeds = []
+  end
+
   def top_neighbor(cell)
     cell.y > 0
   end
