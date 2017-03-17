@@ -76,9 +76,9 @@ describe "Game of Life" do
     end
 
     it "populates a world with seeds" do
-      @game = Game.new(@world, @seeds)
       @seeds = [[1,0,0], [1,0,1], [0,1,1]]
-      
+      @game = Game.new(@world, @seeds)
+      expect(@world.grid[1][1]).to be_alive
     end
 
 
