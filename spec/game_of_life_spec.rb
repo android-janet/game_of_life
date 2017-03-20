@@ -8,13 +8,19 @@ describe "Game of Life" do
 
   context "World" do
 
-    it "World class responds to methods" do
-      expect(@world).to respond_to(:rows)
-      expect(@world).to respond_to(:columns)
+    it "World class responds to instantiation of cells" do
       expect(@world).to respond_to(:cells)
     end
 
-    it "World class responds to creation of grid" do
+    it "World class responds to instantiation of rows" do
+      expect(@world).to respond_to(:rows)
+    end
+
+    it "World class responds to instantiation of columns" do
+      expect(@world).to respond_to(:columns)
+    end
+
+    it "World class responds to instantiation of grid" do
       expect(@world).to respond_to(:grid)
     end
 
