@@ -1,5 +1,5 @@
 class Game
-attr_accessor :world, :seeds
+  attr_accessor :world, :seeds
 
   #create a world with an array of seeds that will populate the grid in the game
   def initialize(world, seeds)

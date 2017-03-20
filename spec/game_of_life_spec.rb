@@ -1,4 +1,6 @@
 require './game_of_life'
+require './world'
+require './cell'
 
 describe "Game of Life" do
   before (:each) do
@@ -8,19 +10,19 @@ describe "Game of Life" do
 
   context "World" do
 
-    it "World class responds to instantiation of cells" do
+    it "World class responds to cells variable" do
       expect(@world).to respond_to(:cells)
     end
 
-    it "World class responds to instantiation of rows" do
+    it "World class responds to rows variable" do
       expect(@world).to respond_to(:rows)
     end
 
-    it "World class responds to instantiation of columns" do
+    it "World class responds to columns variable" do
       expect(@world).to respond_to(:columns)
     end
 
-    it "World class responds to instantiation of grid" do
+    it "World class responds to grid variable" do
       expect(@world).to respond_to(:grid)
     end
 
@@ -47,10 +49,16 @@ describe "Game of Life" do
 
   context "Cell" do
 
-    it "responds to methods" do
-      expect(@cell).to respond_to(:x)
-      expect(@cell).to respond_to(:y)
+    it "responds to alive variable" do
       expect(@cell).to respond_to(:alive)
+    end
+
+    it "responds to y variable" do
+      expect(@cell).to respond_to(:y)
+    end
+
+    it "responds to x variable" do
+      expect(@cell).to respond_to(:x)
     end
 
     it "creates a dead cell by default" do
@@ -66,13 +74,19 @@ describe "Game of Life" do
 
     end
 
-    it "responds to methods" do
+    it "responds to world variable in Game class" do
       expect(@game).to respond_to(:world)
+    end
+
+    it "responds to seeds variable" do
       expect(@game).to respond_to(:seeds)
+    end
+
+    it "responds to top neighbor" do
       expect(@game).to respond_to(:top_neighbor)
     end
 
-    it "create a game object" do
+    it "creates a game object" do
       expect(@game).to be_an_instance_of(Game)
     end
 
