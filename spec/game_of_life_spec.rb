@@ -9,10 +9,13 @@ describe "Game of Life" do
   context "World" do
 
     it "World class responds to methods" do
-      expect(@world).to respond_to(:grid)
       expect(@world).to respond_to(:rows)
       expect(@world).to respond_to(:columns)
       expect(@world).to respond_to(:cells)
+    end
+
+    it "World class responds to creation of grid" do
+      expect(@world).to respond_to(:grid)
     end
 
     #checks if @world is of the World class
