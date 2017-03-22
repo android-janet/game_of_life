@@ -4,7 +4,7 @@ require './cell'
 
 describe "Game of Life" do
   before (:each) do
-    @world = World.new
+    @world = World.new(@rows, @columns)
     @cell = Cell.new
   end
 
@@ -70,7 +70,7 @@ describe "Game of Life" do
   context "Game" do
     before (:each) do
       @game = Game.new(@world, @seeds)
-      @seeds = []
+      @seeds = [[1,0], [1,0], [0,1]]
 
     end
 
@@ -99,9 +99,7 @@ describe "Game of Life" do
     end
 
     it "populates a world with seeds" do
-      @seeds = [[1,0,0], [1,0,1], [0,1,1]]
-      @game = Game.new(@world, @seeds)
-      expect(@world.grid[1][1]).to be_alive
+      expect(@world.grid[1][0]).to be_alive
     end
 
 

@@ -2,6 +2,10 @@ class World
   #make these objects accessible in other methods
   attr_accessor :rows, :columns, :cells, :grid
 
+  def initialize(rows, columns)
+    @rows = rows
+    @columns = columns
+  end
   #create a 2-D array
   def grid
     rows = []
@@ -14,7 +18,7 @@ class World
         cell = Cell.new(column, row)
         #We will need to be able to shovel a cell into an array of cells in the game.
         cells << cell
-
+        cell
       end
     end
   end

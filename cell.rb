@@ -2,7 +2,7 @@ class Cell
   attr_accessor :alive, :x, :y
 
   #initialize a cell with x and y coordinates
-  def initialize(x=3,y=3)
+  def initialize(x=0,y=0)
     @x = x
     @y = y
     #default as dead cell

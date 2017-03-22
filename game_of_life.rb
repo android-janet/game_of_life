@@ -7,7 +7,9 @@ class Game
   end
 
   def top_neighbor(cell)
-    cell.x cell.y > 0
+    if cell(x,y)
+    top_neighbor = grid[cell.y + 1][cell.x]
+    end
   end
 
   def bottom_neighbor(cell)

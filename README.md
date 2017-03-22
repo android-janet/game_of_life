@@ -26,7 +26,7 @@ For any dead cell,</br>
 1. Check your current version of Ruby by running 'ruby -v' from your command line. If needed, you can install/update your Ruby version here https://www.ruby-lang.org/en/documentation/installation/.</br>
 
 <strong>Set up the Game of Life</strong></br>
-1. Create a Ruby file name game.rb.</br>
+1. Create a Ruby file named game_of_life.rb.</br>
 2. </br>
 
 <strong>Set up GitHub repository for your program</strong></br>
